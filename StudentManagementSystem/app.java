@@ -21,7 +21,16 @@ public class app {
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
 
-            choice = sc.nextInt();
+            try {
+                choice = sc.nextInt();
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("\nInvalid input. Please enter a number.");
+                sc.nextLine();
+                choice = 0;
+            } catch (java.util.NoSuchElementException e) {
+                System.out.println("\nNo input provided. Exiting.");
+                break;
+            }
 
             switch (choice) {
 

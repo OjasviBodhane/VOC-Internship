@@ -57,4 +57,8 @@ public class StudentManager {
         System.out.println("\nStudent Not Found.");
     }
 
+    public static void main(String[] args) {
+        app.main(args);
+    }
+
 }
